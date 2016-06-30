@@ -1,0 +1,63 @@
+<link href="css/calendar.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/moment.js"></script>
+<script src="js/calendario.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+	var jsonData = null;
+	var currentDate = null;
+	
+	$(document).ready(function() {
+		jsonData = [{
+			"date": "24-06-2016",
+			"datetype": "busy",
+			"events": [{
+				"eventtype": "reminder",
+				"eventtext": "reminreminderdreminderer texremindert"
+			},
+			{
+				"eventtype": "appointment",
+				"eventtext": "remindremindremindererer tereminderxt"
+			},{
+				"eventtype": "reminder",
+				"eventtext": "reminreminderdreminderer texremindert"
+			},
+			{
+				"eventtype": "appointment",
+				"eventtext": "remindremindremindererer tereminderxt"
+			},{
+				"eventtype": "reminder",
+				"eventtext": "reminreminderdreminderer texremindert"
+			},
+			{
+				"eventtype": "appointment",
+				"eventtext": "remindremindremindererer tereminderxt"
+			}]
+		}, {
+			"date": "07-06-2016",
+			"datetype": "busy",
+			"events": [{
+				"eventtype": "reminder",
+				"eventtext": "remindreminderer texreminderremindert"
+			}]
+		}, {
+			"date": "08-06-2016",
+			"datetype": "busy",
+			"events": [{
+				"eventtype": "reminder",
+				"eventtext": "remivnder tereminderreminderxt"
+			}]
+		}];
+		
+		$(".calendario").createCalendar(jsonData, "23-06-2016");
+		
+	});
+</script>
+
+<div style="width: 100%; text-align: center;">
+	<div class="calendario" style="display: inline-block;"></div>
+</div>

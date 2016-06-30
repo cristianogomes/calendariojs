@@ -1,0 +1,26 @@
+<link href="css/calendar.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/moment.js"></script>
+<script src="js/calendario.js"></script>
+<script src="js/script.js"></script>
+
+<div style="width: 100%; text-align: center;">
+	<div id="calendario" class="calendario" style="display: inline-block;"></div>
+</div>
+
+<script>
+	var dias = [{
+		date: "24-06-2016",
+		datetype: "busy",
+		events: [{
+			eventtype: "reminder",
+			eventtext: "trud exercitation ullamco lab"
+		}]
+	}];
+   
+	var c = new Calendario({
+		json: dias
+	});
+</script>
