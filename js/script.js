@@ -101,7 +101,6 @@
             
             if (element.hasOwnProperty('events')) {
                $.each(element.events, function(index, event) {
-                  
                   $('#'+element.date).append('<div class="divsEvents ' + event.eventtype + 'event crop" title="' + event.eventtext + '">'+event.eventtext+'</div>')
                });
             }
@@ -109,13 +108,6 @@
       }
    }
    
-   
-   
-   
-   
-   
-   
-
    function calculaQtdSemanas(inicioCalendario) {
       var ano = inicioCalendario.year();
       var mes = inicioCalendario.get('month');
@@ -129,7 +121,14 @@
       return qtdSemanas;
    }
 
-   function extend(a, b) { for (var key in b) { if (b.hasOwnProperty(key)) { a[key] = b[key]; } } return a; }
+   function extend(a, b) {
+      for (var key in b) {
+         if (b.hasOwnProperty(key)) {
+            a[key] = b[key];
+         }
+      }
+      return a;
+   }
 
    window.Calendario = Calendario;
 })(window);
